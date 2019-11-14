@@ -30,6 +30,32 @@
             <scope>test</scope>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.3.6.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.0.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -44,9 +70,11 @@
                 </configuration>
             </plugin>
             <plugin>
+
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.1.0</version>
+
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -55,18 +83,20 @@
                         </goals>
                     </execution>
                 </executions>
+
                 <configuration>
                     <createDependencyReducedPom>false</createDependencyReducedPom>
                     <transformers>
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                        <transformer
+                                implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                             <mainClass>org.academiadecodigo.javabank.App</mainClass>
                         </transformer>
                     </transformers>
                 </configuration>
+
             </plugin>
         </plugins>
     </build>
-
 
 
 </project>

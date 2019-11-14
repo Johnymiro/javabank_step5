@@ -19,9 +19,16 @@ import java.util.Map;
  */
 public class Bootstrap {
 
+
+    public static void main(String[] args) {
+
+    }
+
+
     private AuthServiceImpl authService;
     private CustomerServiceImpl customerService;
     private AccountServiceImpl accountService;
+
 
     /**
      * Sets the authentication service
@@ -53,6 +60,13 @@ public class Bootstrap {
     /**
      * Creates a {@code CustomerService} and populates it with data
      */
+
+    public void start(){
+
+
+    }
+
+
     public void loadCustomers() {
 
         Customer c1 = new Customer();
